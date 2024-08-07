@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SonarLintProjectSettings">
+    <option name="moduleMapping">
+      <map>
+        <entry key="api-publishing" value="api-storage (1)" />
+        <entry key="api-storage" value="api-storage (2)" />
+      </map>
+    </option>
+  </component>
+</project>
