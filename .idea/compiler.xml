@@ -6,20 +6,23 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="api-gateway" />
         <module name="export-starter" />
+        <module name="api-storages" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="api-publishing" target="17" />
-      <module name="api-storage" target="21" />
+      <module name="tiji-db-structure-export" target="9" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="api-gateway" options="-parameters" />
       <module name="api-publishing" options="-parameters" />
-      <module name="api-storage" options="-parameters" />
+      <module name="api-storages" options="-parameters" />
       <module name="export-starter" options="-parameters" />
+      <module name="tiji-db-structure-export" options="-parameters" />
     </option>
   </component>
 </project>

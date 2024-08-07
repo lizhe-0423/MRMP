@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: api-storage
+  profiles:
+    active: dev
+
+  # 数据库配置
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/ks
+    username: root
+    password:
+
+# 对象存储
+cos:
+  client:
+    accessKey:
+    secretKey:
+    region: ap-nanjing
+    bucket:
+
+
+export:
+  client:
+    data-source-url: jdbc:mysql://127.0.0.1:3306/
+    data-source-username: root
+    data-source-password:
+    out-dir: C:\Users\admin\Desktop\微服务课题\下载文件

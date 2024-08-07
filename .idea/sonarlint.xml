@@ -4,7 +4,7 @@
     <option name="moduleMapping">
       <map>
         <entry key="api-publishing" value="api-storage (1)" />
-        <entry key="api-storage" value="api-storage (2)" />
+        <entry key="api-storages" value="api-storage (2)" />
       </map>
     </option>
   </component>
