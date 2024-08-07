@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/MRMP.iml" filepath="$PROJECT_DIR$/.idea/MRMP.iml" />
+      <module fileurl="file://$PROJECT_DIR$/api-publishing/api-publishing.iml" filepath="$PROJECT_DIR$/api-publishing/api-publishing.iml" />
+      <module fileurl="file://$PROJECT_DIR$/api-storage/api-storage.iml" filepath="$PROJECT_DIR$/api-storage/api-storage.iml" />
     </modules>
   </component>
 </project>

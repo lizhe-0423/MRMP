@@ -6,12 +6,13 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="api-gateway" />
         <module name="export-starter" />
-        <module name="api-publishing" />
-        <module name="api-storage" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="api-publishing" target="17" />
+      <module name="api-storage" target="21" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
