@@ -1,0 +1,77 @@
+server:
+  port: 8090
+
+spring:
+  cloud:
+    gateway:
+      # 路由配置列表
+      routes:
+        # 定义一个具体的路由规则
+#        - id: route_time
+          # 设置此路由规则的目标URI
+#          uri: https://yupi.icu
+          # 路由断言列表，用于定义请求何时匹配此路由规则
+#          predicates:
+            # 定义一个After断言，表示在指定日期时间之后的请求才会匹配此路由规则
+#            - After=2024-08-02T17:42:47.789-07:00[America/Denver]
+            # 定义一个Before断言，表示在指定日期时间之前的请求才会匹配此路由规则
+#            - Before=2025-01-20T17:42:47.789-07:00[America/Denver]
+            # 定义一个Method断言，表示只有GET和POST方法的请求才会匹配此路由规则
+#            - Method=GET,POST
+
+
+
+        # 定义一个具体的路由规则
+        - id: route_path1
+          # 设置此路由规则的目标URI
+          uri: http://localhost:8080
+          # 路由断言列表，用于定义请求何时匹配此路由规则
+          predicates:
+            # 定义一个Path断言，表示路径以"/api/yupi/"开头的请求才会匹配此路由规则
+            - Path=/api/export/**
+            # 请求过滤器配置
+#          filters:
+            # 添加一个请求参数
+#            - AddRequestParameter=name,lizhe
+            # 添加一个请求头
+#            - AddRequestHeader=seekcy,joysuch
+        # 定义一个具体的路由规则
+        - id: route_path2
+          # 设置此路由规则的目标URI
+          uri: http://localhost:8080
+          # 路由断言列表，用于定义请求何时匹配此路由规则
+          predicates:
+            # 定义一个Path断言，表示路径以"/api/baidu/"开头的请求才会匹配此路由规则
+            - Path=/api/data/**
+            # 定义一个具体的路由规则
+
+
+
+
+#        - id: weight_high
+#          # 设置此路由规则的目标URI
+#          uri: https://yupi.icu
+#          # 路由断言列表，用于定义请求何时匹配此路由规则
+#          predicates:
+#            # 定义一个weight断言，表示属于"group1"组且权重为8的请求才会匹配此路由规则
+#            - weight=group1,8
+#        # 定义一个具体的路由规则
+#        - id: weight_low
+#          # 设置此路由规则的目标URI
+#          uri: https://www.baidu.com
+#          # 路由断言列表，用于定义请求何时匹配此路由规则
+#          predicates:
+#            # 定义一个weight断言，表示属于"group1"组且权重为2的请求才会匹配此路由规则
+#            - weight=group1,2
+
+
+
+
+logging:
+  level:
+    org:
+      springframework:
+        cloud:
+          gateway:
+            # 设置Spring Cloud Gateway路由相关组件的日志级别为trace
+            route: trace
