@@ -8,11 +8,11 @@
         <outputRelativeToContentRoot value="true" />
         <module name="api-gateway" />
         <module name="export-starter" />
+        <module name="api-publishing" />
         <module name="api-storages" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="api-publishing" target="17" />
       <module name="tiji-db-structure-export" target="9" />
     </bytecodeTargetLevel>
   </component>
