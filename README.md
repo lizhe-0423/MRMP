@@ -8,5 +8,14 @@ SEEKCY新员工课题-微服务发布管理平台-基于SpringCloud+RockctMQ+Ela
 - MybatisPlus
 - ElasticSearch
 - RoctetMQ
+- Knife4j
 - Swagger
-- 
+- Redis
+- Mysql
+- Docker
+- Gateway
+- OSS
+- OpenFeign
+
+## 组织架构图V1.0
+![img.png](img.png)
