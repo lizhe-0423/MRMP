@@ -1,6 +1,6 @@
 package com.joysuch.apiuser.model.dto.post;
 
-import com.yupi.project.common.PageRequest;
+import com.joysuch.apiuser.common.PageRequest;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 

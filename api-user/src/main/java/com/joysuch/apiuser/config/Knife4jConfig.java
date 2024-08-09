@@ -1,4 +1,4 @@
-package com.joysuch.apiuser;
+package com.joysuch.apiuser.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

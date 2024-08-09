@@ -1,4 +1,4 @@
-package com.joysuch.apiuser;
+package com.joysuch.apiuser.config;
 
 import com.baomidou.mybatisplus.annotation.DbType;
 import com.baomidou.mybatisplus.extension.plugins.MybatisPlusInterceptor;
@@ -14,7 +14,7 @@ import org.springframework.context.annotation.Configuration;
  * @from <a href="https://yupi.icu">编程导航知识星球</a>
  */
 @Configuration
-@MapperScan("com.yupi.project.mapper")
+@MapperScan("com.joysuch.apiuser")
 public class MyBatisPlusConfig {
 
     /**
