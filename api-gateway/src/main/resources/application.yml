@@ -1,7 +1,12 @@
 server:
-  port: 8090
-
+  port: 8091
 spring:
+  application:
+    admin:
+      enabled: false
+
+
+
   cloud:
     gateway:
       # 路由配置列表
@@ -63,15 +68,3 @@ spring:
 #          predicates:
 #            # 定义一个weight断言，表示属于"group1"组且权重为2的请求才会匹配此路由规则
 #            - weight=group1,2
-
-
-
-
-logging:
-  level:
-    org:
-      springframework:
-        cloud:
-          gateway:
-            # 设置Spring Cloud Gateway路由相关组件的日志级别为trace
-            route: trace

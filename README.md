@@ -15,7 +15,7 @@ SEEKCY新员工课题-微服务发布管理平台-基于SpringCloud+RockctMQ+Ela
 - Docker
 - Gateway
 - OSS
-- OpenFeign
+- Dubbo
 
 ## 组织架构图V1.0
 ![img.png](img.png)

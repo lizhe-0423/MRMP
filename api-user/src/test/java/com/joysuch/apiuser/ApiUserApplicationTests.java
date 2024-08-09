@@ -1,10 +1,10 @@
-package com.yousuch.apigateway;
+package com.joysuch.apiuser;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class YuapiGatewayApplicationTests {
+class ApiUserApplicationTests {
 
     @Test
     void contextLoads() {

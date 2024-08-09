@@ -1,4 +1,4 @@
-package com.joysuch.storage.cli;
+package com.joysuch.publish.cli;
 
 import org.jetbrains.annotations.NotNull;
 

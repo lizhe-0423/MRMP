@@ -1,8 +1,10 @@
 package com.joysuch.storage;
 
+import org.apache.dubbo.config.spring.context.annotation.EnableDubbo;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.PropertySource;
 import org.springframework.scheduling.annotation.EnableScheduling;
 
 /**
@@ -14,6 +16,8 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 @SpringBootApplication()
 @MapperScan("com.joysuch.storage")
 @EnableScheduling
+@EnableDubbo(scanBasePackages = "com.joysuch.dubbo.provider")
+@PropertySource(value = "classpath:/provider-config.properties")
 public class MainApplication {
 
     public static void main(String[] args) {
