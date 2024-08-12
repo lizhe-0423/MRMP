@@ -23,15 +23,15 @@ import org.springframework.stereotype.Service;
         HibernateJpaAutoConfiguration.class})
 @EnableDubbo
 @PropertySource(value = "classpath:/consumer-config.properties")
-public class YuapiGatewayApplication {
+public class ApiGatewayApplication {
 
     @DubboReference(version = "${demo.service.version}")
     private DemoService demoService;
 
     public static void main(String[] args) {
 
-        ConfigurableApplicationContext context = SpringApplication.run(YuapiGatewayApplication.class, args);
-        YuapiGatewayApplication application = context.getBean(YuapiGatewayApplication.class);
+        ConfigurableApplicationContext context = SpringApplication.run(ApiGatewayApplication.class, args);
+        ApiGatewayApplication application = context.getBean(ApiGatewayApplication.class);
         String result = application.doSayHello("world");
         System.out.println("result: " + result);
     }
