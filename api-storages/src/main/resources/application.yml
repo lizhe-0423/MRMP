@@ -3,13 +3,19 @@ spring:
     name: api-storage
   profiles:
     active: dev
-
+    #  上传文件大小
+  servlet:
+    multipart:
+      max-file-size: 1MB
+      max-request-size: 1MB
+server:
   # 数据库配置
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3306/ks
     username: root
     password:
+  port: 8723
 
 # 对象存储
 cos:

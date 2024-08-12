@@ -65,6 +65,6 @@ public class CosManager {
         GetObjectRequest getObjectRequest = new GetObjectRequest(cosClientConfig.getBucket(), key);
 
         // 使用GetObjectRequest对象和本地文件路径，从COS获取对象并保存到本地
-        return cosClient.getObject(getObjectRequest, new File(outputFilePath+key));
+        return cosClient.getObject(getObjectRequest, new File(outputFilePath + File.separator + key));
     }
 }
