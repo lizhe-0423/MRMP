@@ -24,8 +24,7 @@ import java.util.stream.Collectors;
 /**
  * 用户接口
  *
- * @author <a href="https://github.com/liyupi">程序员鱼皮</a>
- * @from <a href="https://yupi.icu">编程导航知识星球</a>
+ 
  */
 @RestController
 @RequestMapping("/user")
@@ -108,10 +107,7 @@ public class UserController {
         BeanUtils.copyProperties(user, userVO);
         return ResultUtils.success(userVO);
     }
-
-    // endregion
-
-    // region 增删改查
+    
 
     /**
      * 创建用户
@@ -237,6 +233,4 @@ public class UserController {
         userVOPage.setRecords(userVOList);
         return ResultUtils.success(userVOPage);
     }
-
-    // endregion
 }

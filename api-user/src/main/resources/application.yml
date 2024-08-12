@@ -1,0 +1,8 @@
+spring:
+  application:
+    name:
+      api-user
+
+  profiles:
+    active: dev
+  # 配置数据库mysql redis

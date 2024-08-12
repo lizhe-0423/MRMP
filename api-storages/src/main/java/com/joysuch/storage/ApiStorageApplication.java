@@ -18,10 +18,10 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 @EnableScheduling
 @EnableDubbo(scanBasePackages = "com.joysuch.dubbo.provider")
 @PropertySource(value = "classpath:/provider-config.properties")
-public class MainApplication {
+public class ApiStorageApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(MainApplication.class, args);
+        SpringApplication.run(ApiStorageApplication.class, args);
     }
 
 }
