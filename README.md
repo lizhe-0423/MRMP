@@ -37,8 +37,7 @@ SEEKCY新员工课题-微服务发布管理平台-基于SpringCloud+RockctMQ+Ela
 ![image](https://github.com/user-attachments/assets/5380889f-9a3c-41d5-a897-191336cf53d2)
 
 ## 产品结构图
-![image](https://github.com/user-attachments/assets/b68f1802-c078-480e-8be9-ac4370ee2b1d)
-![image](https://github.com/user-attachments/assets/04a71008-0b3d-4744-bf57-ca5f7eeefeab)
+![image](https://github.com/user-attachments/assets/0056efab-7b17-40be-8f79-c08389b42f4c)
 
 ## 功能清单附1
 ![image](https://github.com/user-attachments/assets/508448d7-e8a2-47e1-8ea7-3a812d933a1d)
