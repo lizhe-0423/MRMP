@@ -5,12 +5,8 @@ import org.eclipse.jgit.api.Git;
 import org.eclipse.jgit.api.errors.GitAPIException;
 import org.eclipse.jgit.lib.Ref;
 import org.eclipse.jgit.lib.SymbolicRef;
-import org.eclipse.jgit.transport.CredentialsProvider;
-import org.eclipse.jgit.transport.PushResult;
-import org.eclipse.jgit.transport.RefSpec;
-import org.eclipse.jgit.transport.RemoteRefUpdate;
+import org.eclipse.jgit.transport.*;
 import org.eclipse.jgit.transport.RemoteRefUpdate.Status;
-import org.eclipse.jgit.transport.UsernamePasswordCredentialsProvider;
 
 import java.io.File;
 import java.io.IOException;
@@ -24,6 +20,8 @@ import java.util.stream.Collectors;
  */
 @Slf4j
 public class GitUtils {
+
+
 
     /**
      * 提交文件到仓库 (包括新增的、更改的、删除的)
@@ -101,7 +99,7 @@ public class GitUtils {
         String oldBranch = git.getRepository().getBranch();
         // 如果要删除的分支等于当前分支，切换到master
         if (oldBranch.equals(branchName)) {
-            git.checkout().setName("master").call();
+            git.checkout().setName("main").call();
         }
         // 删除本地分支
         git.branchDelete().setBranchNames(GitBranchType.LOCAL.getPrefix() + branchName).setForce(true).call();

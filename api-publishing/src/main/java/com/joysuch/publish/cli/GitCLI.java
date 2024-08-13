@@ -19,7 +19,7 @@ public class GitCLI implements Runnable {
     @Override
     public void run() {
         try {
-            com.joysuch.storage.cli.GitInteractor.doGitAction(projectDir, gitCommand);
+            com.joysuch.publish.cli.GitInteractor.doGitAction(projectDir, gitCommand);
         } catch (IOException | InterruptedException e) {
             e.printStackTrace();
         }
