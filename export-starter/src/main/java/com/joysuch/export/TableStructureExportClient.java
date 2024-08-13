@@ -60,7 +60,11 @@ public class TableStructureExportClient {
      * @param oldTableBaseMaps 旧表映射信息，可选参数，用于加速文档生成过程
      * @param isAi             是否使用AI助手来获取数据库备注
      */
-    public void documentGeneration(Map<String, String> oldTableBaseMaps, boolean isAi) {
+    public void documentGeneration(Map<String, String> oldTableBaseMaps, boolean isAi, List<String> designatedTableName) {
+
+        if(designatedTableName==null){
+            designatedTableName = new ArrayList<>();
+        }
 
         // 数据库名称
         String databaseName;
@@ -89,9 +93,10 @@ public class TableStructureExportClient {
         // 使用计数器来同步所有文档生成任务的完成
         CountDownLatch countDownLatch = new CountDownLatch(tableMaps.size());
         // 对于每个数据库，启动一个线程来生成文档
+        List<String> finalDesignatedTableName = designatedTableName;
         tableMaps.forEach((key, value) -> taskExecutor.execute(() -> {
             try {
-                generateDoc(key, value);
+                generateDoc(key, value, finalDesignatedTableName);
             } catch (Exception e) {
                 // 适当的异常处理逻辑
                 log.error("生成文档失败", e);
@@ -118,7 +123,7 @@ public class TableStructureExportClient {
      * @param databaseName    数据库名称，用于连接数据库
      * @param databaseRemarks 数据库备注，用于文档生成
      */
-    public void generateDoc(String databaseName, String databaseRemarks) {
+    public void generateDoc(String databaseName, String databaseRemarks,List<String> designatedTableName) {
         // 配置数据库连接池
         HikariConfig hikariConfig = getHikariConfig(databaseName);
 
@@ -141,7 +146,7 @@ public class TableStructureExportClient {
             ArrayList<String> ignoreTableName = new ArrayList<>();
             ArrayList<String> ignorePrefix = new ArrayList<>();
             ProcessConfig processConfig = ProcessConfig.builder()
-                    .designatedTableName(new ArrayList<>())
+                    .designatedTableName(designatedTableName)
                     .designatedTablePrefix(new ArrayList<>())
                     .designatedTableSuffix(new ArrayList<>())
                     .ignoreTableName(ignoreTableName)
