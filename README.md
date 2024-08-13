@@ -33,6 +33,22 @@ SEEKCY新员工课题-微服务发布管理平台-基于SpringCloud+RockctMQ+Ela
 
 **api-common** 公共模块 [todo 待做]
 
+## 产品流程图
+![image](https://github.com/user-attachments/assets/5380889f-9a3c-41d5-a897-191336cf53d2)
+
+## 产品结构图
+![image](https://github.com/user-attachments/assets/b68f1802-c078-480e-8be9-ac4370ee2b1d)
+![image](https://github.com/user-attachments/assets/04a71008-0b3d-4744-bf57-ca5f7eeefeab)
+
+## 功能清单附1
+![image](https://github.com/user-attachments/assets/508448d7-e8a2-47e1-8ea7-3a812d933a1d)
+
+## 功能清单附2
+![image](https://github.com/user-attachments/assets/d1cf3cf2-b0dd-4825-af59-0ecc39afa6a3)
+
+
+
+
 ## 进度明细
 | 模块 | 状态  | 描述         | 进度        | 最后更新时间     |
 | --- |-----|------------|-----------|------------|
