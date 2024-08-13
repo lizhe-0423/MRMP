@@ -9,6 +9,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.Resource;
+import java.util.List;
 import java.util.Map;
 
 @Component
@@ -28,7 +29,7 @@ public class ExportManage {
     public BaseResponse<String> exportByAI(boolean isAi) {
         try {
             // 调用远程服务开始文档生成，此处的null参数代表使用默认配置，第二个参数true表示启用详细日志模式
-            tableStructureExportClient.documentGeneration(null, isAi);
+            tableStructureExportClient.documentGeneration(null, isAi, null);
             // 返回成功提示信息
             return ResultUtils.success("导出数据库文档成功");
         } catch (Exception e) {
@@ -48,9 +49,9 @@ public class ExportManage {
      * 本方法通过调用tableStructureExportClient的documentGeneration方法来生成数据库文档
      * 如果生成过程中发生异常，将记录错误日志并返回失败提示
      */
-    public BaseResponse<String> export(Map<String, String> oldTableBaseMaps, boolean isAi) {
+    public BaseResponse<String> export(Map<String, String> oldTableBaseMaps, boolean isAi, List<String> designatedTableName) {
         try {
-            tableStructureExportClient.documentGeneration(oldTableBaseMaps, isAi);
+            tableStructureExportClient.documentGeneration(oldTableBaseMaps, isAi,designatedTableName);
             // 返回成功提示信息
             return ResultUtils.success("导出数据库文档成功");
         } catch (Exception e) {
