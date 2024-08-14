@@ -1,21 +1,18 @@
 package com.joysuch.document.controller;
 
+
 import com.joysuch.document.common.BaseResponse;
 import com.joysuch.document.common.ErrorCode;
-import com.joysuch.document.common.ResultUtils;
 import com.joysuch.document.exception.BusinessException;
-import com.joysuch.document.manager.CosManager;
 import com.joysuch.document.manager.ExportManage;
 import com.joysuch.document.request.DbDocumentExportRequest;
-import com.joysuch.export.TableStructureExportClient;
-import com.qcloud.cos.model.ObjectMetadata;
-import com.qcloud.cos.model.PutObjectResult;
 import org.apache.commons.lang3.StringUtils;
-import org.springframework.web.bind.annotation.*;
-import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
-import java.io.File;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;

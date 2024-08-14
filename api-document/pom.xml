@@ -14,15 +14,19 @@
     <name>api-document</name>
     <description>文档文件存储</description>
     <properties>
-        <java.version>1.8</java.version>
+        <java.version>9</java.version>
         <spring-cloud.version>2021.0.5</spring-cloud.version>
     </properties>
     <dependencies>
-
         <!--引入swagger-->
         <dependency>
             <groupId>io.springfox</groupId>
             <artifactId>springfox-swagger2</artifactId>
+            <version>2.9.2</version> <!-- 确保使用合适的版本 -->
+        </dependency>
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger-ui</artifactId>
             <version>2.9.2</version> <!-- 确保使用合适的版本 -->
         </dependency>
         <dependency>
@@ -50,6 +54,7 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
+            <version>2.7.5</version>
         </dependency>
 
         <dependency>
@@ -73,6 +78,7 @@
             <artifactId>lombok</artifactId>
             <optional>true</optional>
         </dependency>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-configuration-processor</artifactId>
@@ -81,6 +87,18 @@
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
+        </dependency>
+        <!--easy word-->
+        <dependency>
+            <groupId>com.sushengren</groupId>
+            <artifactId>easyword</artifactId>
+            <version>1.1.3</version>
+        </dependency>
+        <!--minio-->
+        <dependency>
+            <groupId>io.minio</groupId>
+            <artifactId>minio</artifactId>
+            <version>8.5.11</version>
         </dependency>
         <dependency>
             <groupId>com.squareup.okhttp3</groupId>
@@ -138,6 +156,7 @@
             <artifactId>commons-codec</artifactId>
             <version>1.15</version>
         </dependency>
+        <!--todo 后续改成document不引入 而是调用RPC storage的服务-->
         <dependency>
             <groupId>com.joysuch</groupId>
             <artifactId>export-starter</artifactId>
@@ -179,8 +198,8 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <configuration>
-                    <source>9</source>
-                    <target>9</target>
+                    <source>8</source>
+                    <target>8</target>
                     <compilerArgs>--enable-preview</compilerArgs>
                 </configuration>
             </plugin>

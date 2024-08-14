@@ -1,12 +1,12 @@
 package com.joysuch.document.exception;
 
+
 import com.joysuch.document.common.BaseResponse;
 import com.joysuch.document.common.ErrorCode;
 import com.joysuch.document.common.ResultUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
-
 
 @RestControllerAdvice
 @Slf4j

@@ -1,8 +1,8 @@
 package com.joysuch.document.common;
 
+
 import com.joysuch.document.constant.CommonConstant;
 import lombok.Data;
-
 
 @Data
 public class PageRequest {

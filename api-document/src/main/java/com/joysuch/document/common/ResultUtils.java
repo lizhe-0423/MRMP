@@ -1,5 +1,7 @@
 package com.joysuch.document.common;
 
+import com.joysuch.document.common.BaseResponse;
+import com.joysuch.document.common.ErrorCode;
 
 public class ResultUtils {
 

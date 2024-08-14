@@ -1,6 +1,5 @@
 package com.joysuch.document.common;
 
-
 public enum ErrorCode {
 
     SUCCESS(0, "ok"),

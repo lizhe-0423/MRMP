@@ -1,5 +1,6 @@
 package com.joysuch.dubbo.provider;
 
+
 import java.io.File;
 
 public interface RpcService {
