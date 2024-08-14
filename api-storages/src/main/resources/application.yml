@@ -32,7 +32,13 @@ export:
     data-source-username: root
     data-source-password:
     out-dir: C:\Users\admin\Desktop\微服务课题\下载文件
-
+## MINIO 配置
+minio:
+  endpoint: http://192.168.41.128:20000
+  accessKey: admin
+  secretKey: 12345678
+  secure: false
+  bucketName: test
 
 
 
